@@ -49,7 +49,7 @@ def get_daily_boxoffice(target_date):
 
     # Streamlit Secrets에서 인증키를 안전하게 가져옵니다.
     try:
-    api_key = st.secrets.get("KOBIS_KEY", None)
+        api_key = st.secrets.get("KOBIS_KEY", None)
         if not api_key:
             st.error("🔑 KOBIS_KEY 값을 찾지 못했습니다.")
             st.write("현재 Secrets에 등록된 키 이름:", list(st.secrets.keys()))
